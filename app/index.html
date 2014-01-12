@@ -1,0 +1,34 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title>chromeapp1</title>
+        <!-- build:css styles/main.css -->
+        <link rel="stylesheet" href="bower_components/foundation/css/normalize.css" />
+        <link rel="stylesheet" href="bower_components/foundation/css/foundation.css" />
+        <link rel="stylesheet" href="styles/main.css" />
+        <!-- endbuild -->
+    </head>
+    <body>
+        <div class="row">
+            <div class="small-4 columns">
+                <input type="text" ng-model="yourname" placeholder="Enter your name" />
+                <hr />
+                <h1>Hello {{yourname}}</h1>
+                <h1>Another Line</h1>
+            </div>
+            <div class="small-6 columns" ng-controller="SimpleController">
+                <div>
+                    <a class="button" ng-click="accessfs()">File</a>
+                </div>
+                <div>
+                    <a class="button" ng-click="github()">GitHub</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- build:js scripts/index.js -->
+        <script src="bower_components/requirejs/require.js" data-main="scripts/index.js"></script>
+        <!-- endbuild -->
+    </body>
+</html>

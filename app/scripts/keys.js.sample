@@ -1,0 +1,16 @@
+/*global define, chrome*/
+
+define(function () {
+    'use strict';
+    
+    var baseRedirectUri = 'https://' + chrome.runtime.id + '.chromiumapp.org/';
+    
+    return {
+        github: {
+            id: 'your_client_id',
+            secret: 'your_client_secret',
+            scopes: 'public_repo',
+            redirectUri: baseRedirectUri + 'github'
+        }
+    };
+});
